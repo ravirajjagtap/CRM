@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sshagent(['ec2-key']) {
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@your-ec2-ip "docker pull $ECR_REPO:$IMAGE_TAG && docker run -d -p 80:80 $ECR_REPO:$IMAGE_TAG"'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.114.40.20 "docker pull $my-frappe-app:$latest && docker run -d -p 80:80 $my-frappe-app:$latest"'
                 }
             }
         }
