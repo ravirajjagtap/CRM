@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/ravirajjagtap/CRM.git'
+                git branch: 'develop', url: 'https://github.com/ravirajjagtap/CRM.git'
             }
         }
         stage('Build Docker Image') {
