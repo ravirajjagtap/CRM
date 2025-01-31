@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                     docker.build('my-frappe-app:latest', '-f path/to/Dockerfile .')
+                     docker.build('my-frappe-app:latest', '-f https://github.com/ravirajjagtap/CRM/blob/develop/docker/docker-compose.yml .')
                     sh 'docker build -t $my-frappe-app:$latest.'
             }
         }
