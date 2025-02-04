@@ -18,16 +18,13 @@ pipeline {
                     sh 'docker build -t $my-frappe-app:$latest.'
             }
         }
-        stages {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Run Docker build command with proper arguments
                     sh 'docker build -t frappe-app:latest .'
                 }
             }
         }
-    }
         stage('Push to AWS ECR') {
             steps {
                 withAWS(region: "$ap-northeast-1", credentials: 'aws-jenkins') {
