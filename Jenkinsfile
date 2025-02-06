@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                    sh 'docker build -t $my-frappe-app:$latest.'
+                    sh 'docker build -t my-frappe-app:$latest.'
             }
         }
         stage('Push to AWS ECR') {
