@@ -1,6 +1,11 @@
 pipeline {
     agent any
-
+ environment {
+        GIT_CREDENTIALS = 'github-token'  // Set up Jenkins credentials for GitHub
+        FRAPPE_SITE_NAME = 'mysite.local'
+        DB_PASSWORD = 'admin'  // Change this to a secure password
+        NODE_VERSION = '18'
+    }
     stages {
         stage('Clone Repository') {
             steps {
