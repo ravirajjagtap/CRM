@@ -12,7 +12,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 echo "🔹 Cloning repository..."
-                git credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/JohnDoeShallLive/CRM.git', branch: 'develop'
+                git credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/ravirajjagtap/CRM.git', branch: 'develop'
             }
         }
 
