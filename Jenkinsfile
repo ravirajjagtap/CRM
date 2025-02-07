@@ -6,13 +6,13 @@ pipeline {
         DB_PASSWORD = 'admin'  // Change this to a secure password
         NODE_VERSION = '18'
     }
-    stages {
+     stages {
         stage('Clone Repository') {
             steps {
-                echo "🔹 Cloning repository..."
-                git credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/ravirajjagtap/CRM.git', branch: 'develop'
+                git credentialsId: 'github-token', branch: 'develop', url: 'https://github.com/ravirajjagtap/CRM.git'
             }
         }
+    }
 
         stage('Install Dependencies') {
             steps {
