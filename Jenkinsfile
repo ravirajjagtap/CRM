@@ -4,7 +4,7 @@ pipeline {
     environment {
         GIT_CREDENTIALS = 'github-token'  // Jenkins credentials for GitHub
         FRAPPE_SITE_NAME = 'mysite.local'
-        DB_PASSWORD = credentials('mysql-root-password')  // Use Jenkins credentials for security
+        DB_PASSWORD = credentials(1234)  // Use Jenkins credentials for security
         NODE_VERSION = '18'
     }
 
