@@ -173,7 +173,6 @@ pipeline {
                 '''
             }
         }
-    }
 
     post {
         success {
